@@ -1,6 +1,6 @@
 ﻿namespace ArrayAlgorithms
 {
-    public class Searcher
+    public static class Searcher
     {
         public static int BinarySearch(int[] array, int element)
         {

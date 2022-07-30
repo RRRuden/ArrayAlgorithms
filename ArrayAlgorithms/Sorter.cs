@@ -24,11 +24,5 @@
             if (index > start) QuickSort(array, start, index - 1);
             if (index < end) QuickSort(array, index + 1, end);
         }
-        public static void Switch(this int[] array, int i, int j)
-        {
-            int element = array[i];
-            array[i] = array[j];
-            array[j] = element;
-        }
     }
 }
