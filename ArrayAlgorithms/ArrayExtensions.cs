@@ -8,9 +8,9 @@ namespace ArrayAlgorithms
 {
     public static class ArrayExtensions
     {
-        public static void Switch(this int[] array, int i, int j)
+        public static void Switch<T>(this T[] array, int i, int j)
         {
-            int element = array[i];
+            var element = array[i];
             array[i] = array[j];
             array[j] = element;
         }

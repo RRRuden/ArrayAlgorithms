@@ -7,7 +7,14 @@ namespace ArrayAlgorithms.Tests
         [TestCase(new int[] { 5, 1, 5, 6 }, new int[] { 1, 5, 5, 6 })]
         [TestCase(new int[] { 5, 4, 3, 2, 1, 0 }, new int[] { 0, 1, 2, 3, 4, 5 })]
         [TestCase(new int[] { 1, 1, 1 }, new int[] { 1, 1, 1 })]
-        public void QuickSortTest(int[] array, int[] expectedResult)
+        
+        public void IntSortTest(int [] array, int[] expectedResult)
+        {
+            Sorter.QuickSort(array);
+            Assert.AreEqual(expectedResult, array);
+        }
+        [TestCase(new char[] { 'C', 'A', 'B' }, new char[] { 'A', 'B', 'C' })]
+        public void CharSortTest(char[] array, char[] expectedResult)
         {
             Sorter.QuickSort(array);
             Assert.AreEqual(expectedResult, array);
