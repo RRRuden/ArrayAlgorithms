@@ -2,19 +2,19 @@
 {
     public static class Sorter
     {
-        public static void QuickSort(int[] array)
+        public static void QuickSort<T>(T[] array) where T : IComparable
         {
             QuickSort(array, 0, array.Length - 1);
         }
 
-        public static void QuickSort(int[] array, int start, int end)
+        public static void QuickSort<T>(T[] array, int start, int end) where T : IComparable
         {
             if (end == start) return;
             int index = start;
-            int pivot = array[end];
+            var pivot = array[end];
             for (int i = start; i <= end - 1; i++)
             {
-                if (array[i] <= pivot)
+                if (pivot.CompareTo(array[i]) > 0)
                 {
                     array.Switch(i, index);
                     index++;
